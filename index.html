@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Estás invitado!</title>
+
+  <!-- Open Graph para vista previa en WhatsApp -->
+  <meta property="og:title" content="¡Estás invitado!">
+  <meta property="og:description" content="Confirma tu asistencia y mira la ubicación.">
+  <meta property="og:image" content="https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/preview.jpg">
+  <meta property="og:url" content="https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/">
+  <meta property="og:type" content="website">
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* Video de fondo */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.7);
+    }
+
+    /* Contenedor de botones */
+    .buttons {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 2;
+    }
+
+    /* Estilo general de botones */
+    .buttons a {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 36px 75px; /* triplicado de 12px 25px */
+      color: white;
+      text-decoration: none;
+      font-size: 54px; /* triplicado de 18px */
+      font-weight: 600;
+      border-radius: 36px; /* triplicado de 12px */
+      box-shadow: 0 12px 45px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    /* Hover */
+    .buttons a:hover {
+      transform: scale(1.05);
+    }
+
+    /* Iconos dentro del botón */
+    .btn-icon {
+      width: 96px;  /* triple de 32px */
+      height: 96px; /* triple de 32px */
+    }
+
+    /* Botón WhatsApp */
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+
+    /* Botón ubicación */
+    .location-btn {
+      background-color: orange; /* cambiado a naranja */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <!-- Botones -->
+  <div class="buttons">
+    <a href="https://wa.me/5217771930619" target="_blank" class="whatsapp-btn">
+      <img src="whatsapp.png" alt="WhatsApp" class="btn-icon"> WhatsApp
+    </a>
+    <a href="https://maps.app.goo.gl/aSfyKK3FAMnZnNXY9" target="_blank" class="location-btn">
+      <img src="location.png" alt="Ubicación" class="btn-icon"> Ubicación
+    </a>
+  </div>
+
+</body>
+</html>
