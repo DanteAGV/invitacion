@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Estás invitado!</title>
+
+  <!-- Open Graph para vista previa en WhatsApp -->
+  <meta property="og:title" content="¡Estás invitado!">
+  <meta property="og:description" content="Confirma tu asistencia y mira la ubicación.">
+  <meta property="og:image" content="preview.jpg">
+  <meta property="og:url" content="index.html">
+  <meta property="og:type" content="website">
+
+  <style>
+    html, body {
+      margin:0;
+      padding:0;
+      height:100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Video de fondo */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Contenedor de botones */
+    .buttons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .buttons a {
+      display: block;
+      margin: 15px 0;
+      padding: 15px 30px;
+      background: rgba(255, 99, 71, 0.9);
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .buttons a:hover {
+      background: rgba(255, 99, 71, 1);
+    }
+  </style>
+</head>
+<body>
+
+  <video id="bg-video" autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+  <div class="buttons">
+    <a href="https://wa.me/5211234567890" target="_blank">Confirmar</a>
+    <a href="https://goo.gl/maps/abcd" target="_blank">Ubicación</a>
+  </div>
+
+</body>
+</html>
+
