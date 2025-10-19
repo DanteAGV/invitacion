@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Estás invitado!</title>
+
+  <!-- Open Graph para vista previa en WhatsApp -->
+  <meta property="og:title" content="¡Estás invitado!">
+  <meta property="og:description" content="Confirma tu asistencia y mira la ubicación.">
+  <meta property="og:image" content="https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/preview.jpg">
+  <meta property="og:url" content="https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/">
+  <meta property="og:type" content="website">
+
+  <!-- Fuente e íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* Video de fondo */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.7);
+    }
+
+    /* Contenedor de botones */
+    .buttons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .buttons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px 0;
+      padding: 15px 35px;
+      background: linear-gradient(135deg, #ff6347, #ff8567);
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .buttons a:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff8567, #ff6347);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <!-- Botones -->
+  <div class="buttons">
+    <a href="mailto:ejemplo@email.com">
+      <i class="fas fa-envelope"></i> Confirmar asistencia
+    </a>
+    <a href="https://goo.gl/maps/Ubicacion" target="_blank">
+      <i class="fas fa-map-marker-alt"></i> Ver ubicación
+    </a>
+  </div>
+
+</body>
+</html>
