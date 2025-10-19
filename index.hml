@@ -7,17 +7,22 @@
   <!-- Open Graph para vista previa en WhatsApp -->
   <meta property="og:title" content="¡Estás invitado!">
   <meta property="og:description" content="Confirma tu asistencia y mira la ubicación.">
-  <meta property="og:image" content="preview.jpg">
-  <meta property="og:url" content="index.html">
+  <meta property="og:image" content="https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/preview.jpg">
+  <meta property="og:url" content="https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/">
   <meta property="og:type" content="website">
+
+  <!-- Fuente e íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
     html, body {
-      margin:0;
-      padding:0;
-      height:100%;
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
       overflow: hidden;
+      color: #fff;
     }
 
     /* Video de fondo */
@@ -31,6 +36,7 @@
       height: auto;
       object-fit: cover;
       z-index: -1;
+      filter: brightness(0.7);
     }
 
     /* Contenedor de botones */
@@ -43,34 +49,22 @@
     }
 
     .buttons a {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       margin: 15px 0;
-      padding: 15px 30px;
-      background: rgba(255, 99, 71, 0.9);
+      padding: 15px 35px;
+      background: linear-gradient(135deg, #ff6347, #ff8567);
       color: white;
       text-decoration: none;
       font-size: 20px;
-      border-radius: 8px;
-      transition: background 0.3s;
+      font-weight: 600;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     .buttons a:hover {
-      background: rgba(255, 99, 71, 1);
-    }
-  </style>
-</head>
-<body>
-
-  <video id="bg-video" autoplay muted loop>
-    <source src="video.mp4" type="video/mp4">
-    Tu navegador no soporta video.
-  </video>
-
-  <div class="buttons">
-    <a href="https://wa.me/5211234567890" target="_blank">Confirmar</a>
-    <a href="https://goo.gl/maps/abcd" target="_blank">Ubicación</a>
-  </div>
-
-</body>
-</html>
-
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff8567, #ff6347);
