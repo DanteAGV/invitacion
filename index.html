@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Estás invitado!</title>
+
+  <!-- Open Graph para vista previa en WhatsApp -->
+  <meta property="og:title" content="¡Estás invitado!">
+  <meta property="og:description" content="Confirma tu asistencia y mira la ubicación.">
+  <meta property="og:image" content="https://i.imgur.com/zTwZ67D.jpeg">
+  <meta property="og:url" content="https://danteagv.github.io/invitacion3/">
+  <meta property="og:type" content="website">
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      color: #fff;
+      background: #FBCF70;
+    }
+
+    /* Contenedor del video */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #FBCF70;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    /* Video ajustado para móvil */
+    #bg-video {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain; /* Todo el video visible, sin recorte */
+      background-color: #FBCF70;
+    }
+
+    @media (orientation: landscape) {
+      #bg-video {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    /* Contenedor de botones */
+    .buttons {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 2;
+    }
+
+    /* Estilo general de botones */
+    .buttons a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 22px 45px;
+      color: white;
+      text-decoration: none;
+      font-size: 32px;
+      font-weight: 600;
+      border-radius: 22px;
+      box-shadow: 0 7px 27px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    /* Hover */
+    .buttons a:hover {
+      transform: scale(1.05);
+    }
+
+    /* Iconos dentro del botón */
+    .btn-icon {
+      width: 58px;
+      height: 58px;
+    }
+
+    /* Botón WhatsApp */
+    .whatsapp-btn {
+      background-color: #25D366;
+      margin-left: 15px; /* despega un poco del borde izquierdo */
+    }
+
+    /* Botón ubicación */
+    .location-btn {
+      background-color: orange;
+      margin-right: 15px; /* despega un poco del borde derecho */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <div class="video-container">
+    <video id="bg-video" autoplay muted loop playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Botones -->
+  <div class="buttons">
+    <a href="https://wa.me/5217771930619" target="_blank" class="whatsapp-btn">
+      <img src="whatsapp.png" alt="WhatsApp" class="btn-icon"> Confirmar asistencia
+    </a>
+    <a href="https://maps.app.goo.gl/aSfyKK3FAMnZnNXY9" target="_blank" class="location-btn">
+      <img src="location.png" alt="Ubicación" class="btn-icon"> Ubicación
+    </a>
+  </div>
+
+</body>
+</html>
